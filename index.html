@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANKGOD</title>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(#fceae8, #ffffff);
+  }
+
+  /* NAVBAR */
+  .nav1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+
+  .nav1 img {
+    width: 50px;
+    height: auto;
+  }
+
+  .links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .nav1 button {
+    border-radius: 10px;
+    cursor: pointer;
+    width: 90px;
+    height: 35px;
+    border: none;
+    background: black;
+    color: white;
+  }
+
+  /* HERO SECTION */
+  .set1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+  }
+
+  .left-section {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+  .text-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .quote {
+    margin: 20px 0;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .text-content button {
+    padding: 12px 30px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .hero-img {
+    flex: 1;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  /* 📱 MOBILE */
+  @media (max-width: 768px) {
+    .links {
+      display: none;
+    }
+
+    .left-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .text-content h1 {
+      font-size: 36px;
+    }
+
+    .hero-img img {
+      max-width: 300px;
+    }
+  }
+
+  /* 📱 SMALL MOBILE */
+  @media (max-width: 480px) {
+    .text-content h1 {
+      font-size: 28px;
+    }
+
+    .quote {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="nav1">
+  <img src="./image/kc.png" alt="Logo">
+
+   <div class="links">
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+    
+  <a href="./sign.html">
+    <button>SIGNUP</button>
+  </a>
+</div>
+    
+<div id="home" class="set1">
+    
+    
+  <div class="left-section">
+    <div class="text-content">
+      <h1>
+        Give your workout <br>
+        A New Style
+      </h1>
+
+      <p class="quote">
+        Success isn't always about greatness. It's about consistency.
+        Consistent hard work gains success. Greatness will come.
+      </p>
+
+      <button onclick="goExplore()">Explore</button>
+    </div>
+
+    <div class="hero-img">
+      <img src="./image/image.png" alt="Workout">
+    </div>
+  </div>
+</div>
+
+<script>
+  function goExplore() {
+    const loggedIn = localStorage.getItem("isLoggedIn");
+
+    if (!loggedIn) {
+      alert("❌ You have not signed in yet!");
+    } else {
+      window.location.href = "explore.html";
+    }
+  }
+</script>
+</body>
+    
+</html>

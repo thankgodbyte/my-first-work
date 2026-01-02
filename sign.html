@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up page</title>
+    <style>
+       body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("./image/thankgod\ 031.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+}
+
+.logininputs{
+    border-radius: 10px;
+    background-color:rgba(248, 246, 250, 0.178);
+    min-height: 80vh;
+    min-width: 70vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-size-adjust: 70px;
+    box-shadow: 2px 7px 7px 7px rgb(172, 171, 171);
+}
+.setinput{
+    line-height: 25px;
+    margin-top: 30px;
+}
+.profile{
+    width: 250px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: rgba(255, 255, 255, 0);
+}
+.group{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+.h1{
+   text-align: center; 
+}
+.login{
+    width: 250px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(221, 191, 134);
+    border: none;
+    margin-top: 10px;
+}
+a :hover{
+    background-color: rgb(22, 72, 165);
+    color: whitesmoke;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="logininputs">
+                <h1 class="head1">SIGNUP</h1>
+                <form class="setinput" action="" method="post">
+                    <label for="username">username</label><br>
+                    <input class="profile" type="username" name="" id=""  placeholder="username" required><br>
+                    <label for="name">email</label><br>
+                    <input class="profile" type="email" name="" id="" placeholder="email" required><br>
+                    <label for="number">phone number</label><br>
+                    <input class="profile" type="number" name="" id="" placeholder="phone number" required><br>
+                    <div class="group">
+                        <main style="display: flex; gap: 2px;">
+                            <input class="check" type="checkbox" name="" id="">
+                            <p>remember me</p>
+                            
+                        </main>
+                        <a style="margin-top: 15px; text-decoration: none; color: black;" href="">forget password</a>
+                    </div>
+                    <button type="submit" class="login">SIGNUP</button>
+                    <p>don't have an account? <a style="text-decoration: none; color: white;" href="">Register</a></p>
+                </form>
+            </div>
+    </div>
+    <script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Save login status
+    localStorage.setItem("isLoggedIn", "true");
+
+    alert("✅ You have signed in correctly!");
+
+    // Redirect to explore page
+    window.location.href = "explore.html";
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+h1{
+    text-align: center;
+}
+.set1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.set2{
+     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+p{
+    text-align: center;
+}
+.links{
+    gap: 20px;
+    display: flex;
+}
+.nav1{
+    display: flex;
+    justify-content: space-between;
+}
+
+   

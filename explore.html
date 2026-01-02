@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore more</title>
+</head>
+<body>
+     <style>
+                body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+                color: white;
+                }
+
+                header {
+                padding: 20px 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: rgba(0,0,0,0.4);
+                }
+
+                nav a {
+                margin-left: 20px;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                }
+
+                nav a:hover {
+                color: gold;
+                }
+
+                .hero {
+                height: 80vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                }
+
+                .hero h1 {
+                font-size: 50px;
+                margin-bottom: 10px;
+                }
+
+                .hero p {
+                font-size: 20px;
+                max-width: 600px;
+                }
+
+                .cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 40px;
+                }
+
+                .card {
+                background: rgba(255,255,255,0.1);
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                transition: transform 0.3s;
+                }
+
+                .card:hover {
+                transform: translateY(-10px);
+                }
+
+                footer {
+                background: black;
+                padding: 20px;
+                text-align: center;
+                margin-top: 40px;
+                }
+
+                button {
+                padding: 12px 25px;
+                border: none;
+                border-radius: 8px;
+                background: gold;
+                font-size: 16px;
+                cursor: pointer;
+                }
+
+                button:hover {
+                background: orange;
+                }
+            </style>
+            </head>
+            <body>
+
+            <header>
+            <h2>✨ ExploreWorld</h2>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </nav>
+            </header>
+
+            <section class="hero">
+            <h1>Welcome Explorer 🚀</h1>
+            <p>Discover amazing experiences, powerful ideas, and creative projects built just for you.</p>
+            <button>Get Started</button>
+            </section>
+
+            <section id="features" class="cards">
+            <div class="card">
+                <h3>🔥 Amazing Designs</h3>
+                <p>Modern, responsive layouts that feel premium and professional.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Fast Experience</h3>
+                <p>Optimized for speed and smooth interaction.</p>
+            </div>
+            <div class="card">
+                <h3>🔐 Secure Access</h3>
+                <p>Your session is protected using smart browser storage.</p>
+            </div>
+            </section>
+
+            <section id="about" class="cards">
+            <div class="card">
+                <h3>About Us</h3>
+                <p>
+                We build beautiful digital experiences that inspire creativity and innovation.
+                This platform is designed to feel modern, clean, and exciting.
+                </p>
+            </div>
+            </section>
+
+            <footer>
+            <p>© 2026 ExploreWorld | Built with ❤️</p>
+            </footer>
+
+            <script>
+            // Protect page
+            if (!localStorage.getItem("isLoggedIn")) {
+                alert("❌ You must sign in first!");
+                window.location.href = "signup.html";
+            }
+
+            function logout() {
+                localStorage.removeItem("isLoggedIn");
+                alert("You have logged out");
+                window.location.href = "signup.html";
+            }
+            </script>
+</body>
+</html>
