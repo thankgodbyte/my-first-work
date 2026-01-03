@@ -102,11 +102,12 @@
     max-width: 450px;
   }
 
-  /* 📱 MOBILE */
   @media (max-width: 768px) {
-    .links {
-      display: none;
-    }
+  .links {
+    display: flex;
+    gap: 15px;
+  }
+
 
     .left-section {
       flex-direction: column;
@@ -121,6 +122,29 @@
       max-width: 300px;
     }
   }
+  .menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
 
   /* 📱 SMALL MOBILE */
   @media (max-width: 480px) {
@@ -137,16 +161,21 @@
 <div class="nav1">
   <img src="./image/kc.png" alt="Logo">
 
-   <div class="links">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="contact.html">CONTACT</a>
+  <div class="links" id="menu">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="sign.html">
+      <button class="signup-btn">SIGNUP</button>
+    </a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </div>
 </div>
     
-  <a href="./sign.html">
-    <button>SIGNUP</button>
-  </a>
-</div>
+  
     
 <div id="home" class="set1">
     
@@ -182,6 +211,12 @@
       window.location.href = "explore.html";
     }
   }
+
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  }
+
 </script>
 </body>
     
